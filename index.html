@@ -20,11 +20,23 @@
 
     <div id="question-screen" class="full-screen hidden">
         <h1 class="question-text">Do you want to see what I have made for you?</h1>
-        <button class="main-btn" onclick="startCelebration()">Yes, show me! ✨</button>
+        <button class="main-btn" onclick="showGreetingPage()">Yes, show me! ✨</button>
+    </div>
+
+    <div id="greeting-page" class="full-screen hidden">
+        <div class="greeting-box">
+            <h1 class="fancy-text">Happy Birthday, Aarohi!</h1>
+            <p>Before we celebrate, I want you to know how special you are...</p>
+            <p>A day full of surprises awaits you.</p>
+            <button class="main-btn" onclick="startCelebration()">Let's Cut the Cake! 🎂</button>
+        </div>
     </div>
 
     <div id="cake-screen" class="full-screen hidden dark-room">
-        <div class="balloon-container"><span>🎈</span><span>🎈</span><span>🎈</span></div>
+        <div class="party-decor">✨ ✨ ✨ ✨ ✨</div>
+        <div class="balloon-container">
+            <span>🎈</span><span>💖</span><span>🎈</span><span>💖</span><span>🎈</span>
+        </div>
         <h2 class="bbg-msg">Happy Birthday BBG! 💖</h2>
         
         <div class="cake-container">
@@ -40,22 +52,22 @@
 
     <div id="card-screen" class="full-screen hidden">
         <div class="card-wrapper">
-            <div id="birthday-card" class="card">
+            <div id="birthday-card" class="card" onclick="this.classList.add('open')">
                 <div class="card-front">
                     <h3>Tap to Open 💌</h3>
-                    <p>(A special message for you)</p>
+                    <p>A message from Geetanshu</p>
                 </div>
                 <div class="card-inside">
                     <div class="poem-text">
-                        <p>Your name means a rise,<br>A journey upwards,<br>A quiet strength that grows with time.</p>
-                        <p>And that is exactly how you exist in my life.<br>You lift my days without trying,<br>You make me believe in better things,<br>Just by being you.</p>
-                        <p>My name is <strong>Geetanshu</strong>,<br>A soul of songs.</p>
-                        <p>And maybe that is why destiny chose you,<br>Because every song needs a rise to feel complete.</p>
-                        <p>When my <em>geet</em> meets your <em>aarohi</em>,<br>It finally knows where to go.</p>
-                        <p>Beyond names and meanings,<br>You are my comfort, my excitement, my peace.</p>
-                        <p>You are the reason I smile without checking the time,<br>And the reason my heart feels sure.</p>
-                        <p>On your birthday, I wish you growth, happiness, and endless light.<br>May you always keep rising,<br>And may I always walk beside you.</p>
-                        <p><strong>Happy Birthday.<br>Always yours.</strong></p>
+                        <p>Your name means a rise, a journey upwards, a quiet strength that grows with time.</p>
+                        <p>And that is exactly how you exist in my life. You lift my days without trying, you make me believe in better things, just by being you.</p>
+                        <p>My name is <strong>Geetanshu</strong>, a soul of songs.</p>
+                        <p>And maybe that is why destiny chose you, because every song needs a rise to feel complete.</p>
+                        <p>When my <em>geet</em> meets your <em>aarohi</em>, it finally knows where to go.</p>
+                        <p>Beyond names and meanings, you are my comfort, my excitement, my peace.</p>
+                        <p>You are the reason I smile without checking the time, and the reason my heart feels sure.</p>
+                        <p>On your birthday, I wish you growth, happiness, and endless light. May you always keep rising, and may I always walk beside you.</p>
+                        <p><strong>Happy Birthday. Always yours.</strong></p>
                         <button class="story-btn" onclick="showStory()">Our Story ❤️</button>
                     </div>
                 </div>
@@ -66,13 +78,41 @@
     <div id="story-screen" class="full-screen hidden">
         <div class="story-container">
             <h2 class="story-title">How My Geet Met Your Aarohi</h2>
-            <div class="story-item"><img src="pic5.jpg.jpeg" alt="1"><p>It started with a name...</p></div>
-            <div class="story-item"><img src="pic2.jpg.jpeg" alt="2"><p>The melody I was missing.</p></div>
-            <div class="story-item"><img src="pic6.jpg.jpeg" alt="3"><p>Every look is a reason to smile.</p></div>
-            <div class="story-item"><img src="pic1.jpg.jpeg" alt="4"><p>A quiet strength that grows.</p></div>
-            <div class="story-item"><img src="pic4.jpg.jpeg" alt="5"><p>The reason I smile.</p></div>
-            <div class="story-item"><img src="pic3.jpg.jpeg" alt="6"><p>Always walking beside you.</p></div>
-            <button class="main-btn" onclick="location.reload()">Replay</button>
+            
+            <div class="story-item">
+                <img src="pic5.jpg.jpeg">
+                <p><strong>The Beginning:</strong> It started with a name that felt like destiny. That first look changed everything. ✨</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic2.jpg.jpeg">
+                <p><strong>Pure Grace:</strong> Every time I see you, I'm reminded why my geet needed your aarohi to be complete. 😍</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic6.jpg.jpeg">
+                <p><strong>The Comfort:</strong> In your presence, I found my peace and my favorite reason to smile. 🧡</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic1.jpg.jpeg">
+                <p><strong>The Strength:</strong> You make me believe in the beauty of rising together, day by day. ✨</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic4.jpg.jpeg">
+                <p><strong>Pure Joy:</strong> Every moment captured with you is a memory I'll cherish forever. 🎵</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic3.jpg.jpeg">
+                <p><strong>The Future:</strong> To the girl who holds my heart—today, tomorrow, and always. 🥰</p>
+            </div>
+
+            <div class="final-note">
+                <p>I'll be with you always.</p>
+            </div>
+            <button class="main-btn" onclick="location.reload()">Replay ❤️</button>
         </div>
     </div>
 
