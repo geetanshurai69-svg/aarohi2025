@@ -14,19 +14,24 @@ body { margin: 0; font-family: 'Georgia', serif; background: #fff0f5; overflow-x
     animation: flicker 0.1s infinite alternate;
 }
 
-/* Card Opening Animation */
-.card-wrapper { perspective: 1500px; }
+/* Card Animation */
+.card-wrapper { perspective: 1500px; margin: 20px; }
 .card {
-    width: 320px; height: 450px; position: relative;
+    width: 320px; height: 500px; position: relative;
     transform-style: preserve-3d; transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card.open { transform: rotateY(-180deg); }
 .card-front, .card-inside {
     position: absolute; width: 100%; height: 100%;
-    backface-visibility: hidden; border-radius: 15px; padding: 25px;
+    backface-visibility: hidden; border-radius: 15px; padding: 25px; box-sizing: border-box;
 }
 .card-front { background: #ff69b4; color: white; border: 5px solid white; display: flex; flex-direction: column; justify-content: center; z-index: 2; }
-.card-inside { background: white; transform: rotateY(180deg); border: 5px solid #ff69b4; overflow-y: auto; color: #333; }
+.card-inside { 
+    background: white; transform: rotateY(180deg); 
+    border: 5px solid #ff69b4; overflow-y: auto; color: #333; text-align: left;
+}
+
+.poem-text p { margin-bottom: 15px; line-height: 1.5; font-size: 1rem; }
 
 /* Story Images Zoom */
 .story-item img { width: 100%; border-radius: 15px; transform: scale(0.7); opacity: 0; transition: 1.2s ease; margin-top: 20px; }
