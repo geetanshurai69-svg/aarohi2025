@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     margin: 0;
     font-family: 'Georgia', serif;
@@ -18,56 +19,92 @@ body {
 
 .hidden { display: none !important; }
 
-/* Typewriter Text */
+/* Typewriter Effect */
 #typewriter-text {
     font-size: 1.8rem;
     font-weight: bold;
     color: #ff1493;
 }
 
-/* Balloons Background */
-.balloon-bg {
+/* Intro & Buttons */
+.bounce-text {
+    font-size: 3rem;
+    color: #ff1493;
+    animation: bounce 2s infinite;
+}
+
+.main-btn, .story-btn {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.main-btn:hover, .story-btn:hover { background: #ff1493; transform: scale(1.05); }
+
+/* Balloon Background */
+.balloon-container {
     position: absolute;
-    top: 10%;
+    top: 5%;
     width: 100%;
-    font-size: 2rem;
     display: flex;
     justify-content: space-around;
-    animation: float 3s ease-in-out infinite;
+    font-size: 3rem;
+    animation: float 4s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
+.bbg-msg { font-size: 2.5rem; color: #ff1493; margin-bottom: 20px; }
+#cake-emoji { font-size: 120px; cursor: pointer; transition: 0.3s; }
+#cake-emoji:hover { transform: scale(1.1); }
 
-.bbg-msg {
-    font-size: 2.5rem;
-    color: #ff69b4;
-    margin-bottom: 30px;
-}
-
-/* Greeting Card - Made scrollable for the long poem */
+/* Greeting Card */
 .greeting-card {
     background: white;
     padding: 30px;
-    border-radius: 15px;
-    border: 5px solid #ffb6c1;
+    border-radius: 20px;
+    border: 8px solid #ffb6c1;
     max-width: 400px;
-    max-height: 80vh;
-    overflow-y: auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.poem-text {
-    line-height: 1.6;
-    font-size: 1.1rem;
-    color: #444;
+.poem-text { line-height: 1.6; font-size: 1.1rem; margin-bottom: 20px; }
+
+/* Story Container & Zoom Effect */
+.story-container {
+    width: 95%;
+    max-width: 500px;
+    height: 85vh;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    overflow-y: auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-.poem-text p { margin-bottom: 15px; }
+.story-title { color: #ff1493; border-bottom: 2px solid #ffb6c1; padding-bottom: 10px; }
 
-.main-btn {
-    background: #ff69b4; color: white; border: none;
-    padding: 15px 30px; border-radius: 25px; cursor: pointer;
+.story-item img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 25px;
+    transform: scale(0.8); /* Start smaller for zoom effect */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
 }
+
+/* Class added by JS on scroll */
+.story-item img.reveal-zoom {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.final-note { font-style: italic; color: #ff1493; font-size: 1.4rem; margin: 50px 0; }
+
+/* Animations */
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
