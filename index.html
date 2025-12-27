@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Aarohi!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="intro-screen" class="full-screen">
+        <h1 class="bounce-text">Let's Celebrate! 🥳</h1>
+        <button class="main-btn" onclick="startParty()">Click to Start</button>
+    </div>
+
+    <div id="cake-screen" class="full-screen hidden">
+        <div class="cake-area">
+            <div id="cake-emoji" onclick="handleCakeClick()">🎂</div>
+            <p id="cake-instruction">Click the cake to cut it!</p>
+        </div>
+    </div>
+
+    <div id="card-screen" class="full-screen hidden">
+        <div class="greeting-card">
+            <div class="card-decor">🎈 ✨ 🎈</div>
+            <h1>Happy Birthday, Aarohi!</h1>
+            <p>Wishing you a year as wonderful and bright as you are. Enjoy your special day to the fullest!</p>
+            <div class="card-decor">🎁 🎂 🎁</div>
+            <button class="reset-btn" onclick="location.reload()">Replay</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
