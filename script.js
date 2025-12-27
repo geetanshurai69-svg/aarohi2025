@@ -32,9 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
     type();
 });
 
+function showGreetingPage() {
+    document.getElementById('question-screen').classList.add('hidden');
+    document.getElementById('greeting-page').classList.remove('hidden');
+}
+
 function startCelebration() {
     document.getElementById('bg-music').play();
-    document.getElementById('question-screen').classList.add('hidden');
+    document.getElementById('greeting-page').classList.add('hidden');
     document.getElementById('cake-screen').classList.remove('hidden');
     setTimeout(() => {
         const flames = document.querySelectorAll('.flame');
@@ -47,11 +52,10 @@ function handleCakeClick() {
     document.getElementById('cake-emoji').innerHTML = "🍰";
     document.body.style.background = "#fff0f5"; 
     document.getElementById('cake-screen').classList.remove('dark-room');
-    confetti({ particleCount: 180, spread: 80, origin: { y: 0.6 } });
+    confetti({ particleCount: 200, spread: 90, origin: { y: 0.6 } });
     setTimeout(() => {
         document.getElementById('cake-screen').classList.add('hidden');
         document.getElementById('card-screen').classList.remove('hidden');
-        setTimeout(() => document.getElementById('birthday-card').classList.add('open'), 800);
     }, 1800);
 }
 
