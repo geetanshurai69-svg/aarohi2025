@@ -1,41 +1,33 @@
-body { margin: 0; font-family: 'Georgia', serif; background: #fff0f5; overflow-x: hidden; transition: background 2s; }
-.full-screen { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+body { margin: 0; font-family: 'Georgia', serif; background: #fff0f5; overflow-x: hidden; transition: background 1.5s; }
+.full-screen { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
 .hidden { display: none !important; }
 
-/* Timer */
-#countdown { font-size: 3rem; font-weight: bold; color: #ff1493; margin: 20px 0; }
+/* Big Cake */
+#cake-emoji { font-size: 180px; cursor: pointer; transition: transform 0.3s; z-index: 10; }
+#cake-emoji:hover { transform: scale(1.1); }
 
-/* Dark Room Effect */
-.dark-room { background: #1a1a1a !important; color: white; }
+/* Dark Room */
+.dark-room { background: #0c0c0c !important; color: #fff; }
 .flame { 
-    width: 15px; height: 20px; background: orange; border-radius: 50% 50% 20% 20%;
-    display: inline-block; margin: 0 5px; box-shadow: 0 0 10px orange;
+    width: 15px; height: 25px; background: #ffae00; border-radius: 50% 50% 20% 20%;
+    display: inline-block; margin: 0 8px; box-shadow: 0 0 15px #ffae00;
     animation: flicker 0.1s infinite alternate;
 }
-@keyframes flicker { from { opacity: 0.8; } to { opacity: 1; } }
 
-/* 3D Opening Card */
-.card-wrapper { perspective: 1000px; }
+/* Card Opening Animation */
+.card-wrapper { perspective: 1500px; }
 .card {
-    width: 300px; height: 400px; position: relative;
-    transform-style: preserve-3d; transition: transform 2s ease-in-out;
-    cursor: pointer;
+    width: 320px; height: 450px; position: relative;
+    transform-style: preserve-3d; transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card.open { transform: rotateY(-180deg); }
 .card-front, .card-inside {
     position: absolute; width: 100%; height: 100%;
-    backface-visibility: hidden; border-radius: 15px;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    padding: 20px; box-sizing: border-box;
+    backface-visibility: hidden; border-radius: 15px; padding: 25px;
 }
-.card-front { background: #ff69b4; color: white; border: 5px solid white; z-index: 2; }
-.card-inside { 
-    background: white; transform: rotateY(180deg); 
-    border: 5px solid #ff69b4; overflow-y: auto;
-}
+.card-front { background: #ff69b4; color: white; border: 5px solid white; display: flex; flex-direction: column; justify-content: center; z-index: 2; }
+.card-inside { background: white; transform: rotateY(180deg); border: 5px solid #ff69b4; overflow-y: auto; color: #333; }
 
-/* Animations from previous code */
-.main-btn { padding: 15px 30px; border-radius: 25px; border: none; background: #ff69b4; color: white; cursor: pointer; }
-.story-container { width: 90%; max-width: 500px; height: 80vh; overflow-y: auto; background: white; padding: 20px; border-radius: 20px; }
-.story-item img { width: 100%; border-radius: 15px; transform: scale(0.8); opacity: 0; transition: 1s; }
+/* Story Images Zoom */
+.story-item img { width: 100%; border-radius: 15px; transform: scale(0.7); opacity: 0; transition: 1.2s ease; margin-top: 20px; }
 .story-item img.reveal-zoom { transform: scale(1); opacity: 1; }
