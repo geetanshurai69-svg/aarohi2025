@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Aarohi</title>
+    <title>For My Aarohi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <audio id="bg-music" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="just-you-and-me-punabi-hiphop-music-430754.mp3" type="audio/mpeg">
     </audio>
 
     <div id="date-screen" class="full-screen">
@@ -18,30 +18,75 @@
 
     <div id="intro-screen" class="full-screen hidden">
         <h1 class="bounce-text">Let's Celebrate! 🥳</h1>
-        <button class="main-btn" onclick="startParty()">Enter Her World</button>
+        <button class="main-btn" onclick="startParty()">Start the Magic</button>
     </div>
 
     <div id="cake-screen" class="full-screen hidden">
-        <div class="balloon-bg">🎈 🎈 🎈 🎈 🎈</div>
-        <h2 class="bbg-msg">Happy Birthday BBG!</h2>
+        <div class="balloon-container">
+            <span>🎈</span><span>🎈</span><span>🎈</span><span>🎈</span><span>🎈</span>
+        </div>
+        <h2 class="bbg-msg">Happy Birthday BBG! 💖</h2>
         <div class="cake-area">
             <div id="cake-emoji" onclick="handleCakeClick()">🎂</div>
-            <p>Tap the cake to cut it</p>
+            <p>Click the cake to cut it</p>
         </div>
     </div>
 
     <div id="card-screen" class="full-screen hidden">
         <div class="greeting-card">
             <div class="poem-text">
-                <p>Your name means a rise,<br>A journey upwards,<br>A quiet strength that grows with time.</p>
-                <p>And that is exactly how you exist in my life.<br>You lift my days without trying,<br>You make me believe in better things,<br>Just by being you.</p>
-                <p>My name is <strong>Geetanshu</strong>, a soul of songs.<br>And maybe that is why destiny chose you,<br>Because every song needs a rise to feel complete.</p>
-                <p>When my <em>geet</em> meets your <em>aarohi</em>,<br>It finally knows where to go.</p>
-                <p>Beyond names and meanings,<br>You are my comfort, my excitement, my peace.<br>You are the reason I smile without checking the time,<br>And the reason my heart feels sure.</p>
-                <p>On your birthday, I wish you growth, happiness, and endless light.<br>May you always keep rising,<br>And may I always walk beside you.</p>
+                <p>Your name means a rise, a journey upwards, a quiet strength that grows with time.</p>
+                <p>And that is exactly how you exist in my life. You lift my days without trying, you make me believe in better things, just by being you.</p>
+                <p>My name is <strong>Geetanshu</strong>, a soul of songs. And maybe that is why destiny chose you, because every song needs a rise to feel complete.</p>
+                <p>When my <em>geet</em> meets your <em>aarohi</em>, it finally knows where to go.</p>
+                <p>Beyond names and meanings, you are my comfort, my excitement, my peace.</p>
+                <p>You are the reason I smile without checking the time, and the reason my heart feels sure.</p>
+                <p>On your birthday, I wish you growth, happiness, and endless light. May you always keep rising, and may I always walk beside you.</p>
                 <p><strong>Happy Birthday. Always yours.</strong></p>
             </div>
-            <button class="reset-btn" onclick="location.reload()">❤️</button>
+            <button class="story-btn" onclick="showStory()">Our Story ❤️</button>
+        </div>
+    </div>
+
+    <div id="story-screen" class="full-screen hidden">
+        <div class="story-container">
+            <h2 class="story-title">How My Geet Met Your Aarohi</h2>
+            
+            <div class="story-item">
+                <img src="pic5.jpg.jpeg" alt="First Meet">
+                <p>It started with a name... and a first meetup drip. 👟</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic2.jpg.jpeg" alt="Pretty">
+                <p>I realized quickly... your face card never declines. 😍</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic6.jpg.jpeg" alt="Tradition">
+                <p>Whether in an orange dupatta or casuals, you are my peace. 🧡</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic1.jpg.jpeg" alt="Beautiful">
+                <p>You make me believe in better things just by being you. ✨</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic4.jpg.jpeg" alt="Cutie">
+                <p>Every moment with you is a song I want to play on repeat. 🎵</p>
+            </div>
+
+            <div class="story-item">
+                <img src="pic3.jpg.jpeg" alt="Love">
+                <p>The reason I smile without checking the time. 🥰</p>
+            </div>
+
+            <div class="final-note">
+                <p>To many more birthdays together. I love you, BBG.</p>
+            </div>
+            
+            <button class="main-btn" onclick="location.reload()">Replay</button>
         </div>
     </div>
 
